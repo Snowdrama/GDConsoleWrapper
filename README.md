@@ -9,9 +9,11 @@ For a full reimplementation of the console in C# check out this written by Molik
 https://github.com/MolikoDeveloper/Csharp-Console-Godot/tree/main/addons/csharpConsole
 
 # Usage
-If you haven't, First install the godot console from [jitspoe's Repo](https://github.com/jitspoe/godot-console)
-Drop the `GDConsoleWrapper` folder into the `addons` folder the structure should look like: `addons/GDConsoleWrapper` 
-Then enable both the godot-console and GDConsoleWrapper in the project settings under plugins.
+* If you haven't, First install the godot console from [jitspoe's Repo](https://github.com/jitspoe/godot-console)
+
+* Drop the `GDConsoleWrapper` folder into the `addons` folder the structure should look like: `addons/GDConsoleWrapper` 
+
+* Then enable both the godot-console and GDConsoleWrapper in the project settings under plugins.
 
 You should be all set! Leave an issue if you run into any problems!
 
