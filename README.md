@@ -27,11 +27,11 @@ public partial class SomeNode : Node{
     int hp = 100;
     public override void _Ready()
     {
-        GDConsole.AddCommand<int>("SetHP", SetHP)
+        GDConsole.AddCommand("SetHP", Hello)
     }
 
-    public void SetHP(int hp){
-        this.hp = hp;
+    public void Hello(){
+        GD.Print("Hello from SomeNode!");
     }
 }
 ```
@@ -41,12 +41,13 @@ public partial class SomeNode : Node{
     int hp = 100;
     public override void _Ready()
     {
-        //this takes 3 params! 
-        GDConsole.AddCommand<int, string, bool>("SetHP", DoSomething)
-    }
+        //this can take up to 3 params! 
+        GDConsole.AddCommand<int>("DoSomething1", DoSomething1)
+        GDConsole.AddCommand<int, string>("DoSomething2", DoSomething2)
+        GDConsole.AddCommand<int, string, bool>("DoSomething3", DoSomething3)
 
-    public void DoSomething(int someInt, string someString, bool someBool){
-        //whatever
+        //Or no parameters!
+        GDConsole.AddCommand("DoSomething", DoSomething)
     }
 }
 ```
