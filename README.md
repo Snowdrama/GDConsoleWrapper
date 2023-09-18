@@ -28,7 +28,7 @@ In your code you can use it by calling AddCommand like this:
 public partial class SomeNode : Node{
     public override void _Ready()
     {
-        GDConsole.AddCommand("SetHP", Hello)
+        GDConsole.AddCommand("hello", Hello)
     }
 
     public void Hello(){
@@ -38,7 +38,7 @@ public partial class SomeNode : Node{
     public override void _ExitTree()
     {
         //don't forget to remove the command when this is destroyed!
-        GDConsole.RemoveCommand("SetHP", Hello)
+        GDConsole.RemoveCommand("hello", Hello)
     }
 }
 ```
@@ -55,5 +55,9 @@ public partial class SomeNode : Node{
         //Or no parameters!
         GDConsole.AddCommand("DoSomething", DoSomething)
     }
+    public void DoSomething(){}
+    public void DoSomething1(int something){}
+    public void DoSomething2(int something, string soemString){}
+    public void DoSomething3(int something, string soemString, bool someBool){}
 }
 ```
